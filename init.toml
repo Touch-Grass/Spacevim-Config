@@ -9,6 +9,7 @@
 # All SpaceVim option below [option] section
 [options]
     filetree_direction = "left"
+    bootstrap_after = 'myspacevim#after'
     colorscheme = "onedark"
     background = "dark"
     enable_guicolors = true
@@ -17,32 +18,43 @@
     buffer_index_type = 4
     enable_tabline_filetype_icon = true
     enable_statusline_display_mode = false
-    bootstrap_after = 'myspacevim#after'
+
+    statusline_right_sections = [
+       'cursorpos',
+       'percentage',
+       'input method',
+       'date',
+       'time'
+    ]
 
 # Enable autocomplete layer
 [[layers]]
-  name = 'autocomplete'
-  auto-completion-return-key-behavior = "complete"
-  auto-completion-tab-key-behavior = "smart"
+    name = 'autocomplete'
+    auto-completion-return-key-behavior = "complete"
+    auto-completion-tab-key-behavior = "smart"
 
 [[layers]]
-  name = 'shell'
-  default_position = 'top'
-  default_height = 30
+    name = 'shell'
+    default_position = 'top'
+    default_height = 30
 
 [[layers]]
-  name = "incsearch"
+    name = "incsearch"
 
 [[layers]]
-  name = "ui"
-  enable_scrollbar = true
+    name = "ui"
+    enable_scrollbar = true
 
 [[layers]]
-  name = 'colorscheme'
-  enable = true
+    name = 'colorscheme'
+    enable = true
 
 [[layers]]
-  name = 'ctrlp'
+  name = "lsp"
+  enabled_clients =	['typescript-language-server', '--stdio']
+
+[[layers]]
+    name = 'ctrlp'
 
 [[layers]]
   name = 'lang#html'
@@ -65,10 +77,6 @@
   enable = true
 
 [[layers]]
-  name = 'ui'
-  enable = true
-
-[[layers]]
   name = 'git'
   enable = true
 
@@ -81,9 +89,9 @@
   enable = true
 
 [[custom_plugins]]
-  name = 'wakatime/vim-wakatime'
-  enable = true
+    name = 'wakatime/vim-wakatime'
+    enable = true
 
 [[custom_plugins]]
-  name = 'https://github.com/github/copilot.vim'
-  enable = true
+    name = 'https://github.com/github/copilot.vim'
+    enable = true
